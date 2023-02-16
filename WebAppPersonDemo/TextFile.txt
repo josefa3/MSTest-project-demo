@@ -1,0 +1,31 @@
+﻿MSTest Project Test este seria la 4ta capa del proyecto en capas que se conecta con la capa de servicios para hacer las pruebas.
+	Recordar agregar referencia al proyecto de MVC.
+
+
+
+Para hacer prueba entrar en el menu principal, Test, Test Explorer (deben aparecer todos los metodos de prueba).
+
+Para ejecutar una prueba en especifico, click derecho en el nombre del metodo, Ejecutar prueba.
+
+Para ver alguna prueba que haya resultado fallida, colocar punto de interrupcion y darle a depurar prueba.
+
+
+
+Agregar libreria Moq en el proyecto de Pruebas unitarias, Chala agrega el de Daniel Cazzulino.
+	Moq es una libreria que permite crear objetos en memoria para las pruebas, simula objetos reales
+
+* En HomeTest se hace una demostracion de como se hacen las pruebas unitarias haciendo refactorizacion... que es la refactorizacion??
+	Aca la prueba pasa asignandole el Mock. Asi se le asigna a HomeTest un objeto en memoria, gracias al Moq, se toma la informacion a traber de IServicioPersona
+		para luego implementarlo en un patron repositorio y con ese objeto en memoria se le pasa en el paso Actuar al metodo que estamos probando para obtener el resultado 
+		
+		
+		//Objeto Repositorio??? PENDIENTE: saber si estas pruebas se hacen solo con la capa de Servicios o si tambien se hace con la capa DAL
+
+
+* En ServicioPersonaTest se estan probando los metodos directamente, en la primera parte de la demostracion, aun no estaba el IServicioPersona.
+
+
+* En PersonaTest hace demostracion para aplicar el enfoque TDD, es decir, que se puede construir todo el aplicativo o proyecto a base de pruebas unitarias.
+
+
+OJO recordar colocar [TestClass] y [TestMethod] en la clase de pruebas unitarias, llamar la clase o libreria? Microsoft.VisualStudio.TestTools.UnitTesting
